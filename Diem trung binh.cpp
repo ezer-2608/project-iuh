@@ -11,7 +11,7 @@ int main(){
 	printf("Nhap diem Hoa va he so mon Hoa: ");
 	scanf("%f %f", &hoa, &hsHoa);
 	
-	float DiemTB = (toan*hsToan + li*hsLi + hoa*hsHoa) / (hsToan + hsLi + hsHoa);
+	float DiemTB = (toan * hsToan + li * hsLi + hoa * hsHoa) / (hsToan + hsLi + hsHoa);
 	printf("Diem trung binh cua ban la: %.2f", DiemTB);
 	return 0;
 }
