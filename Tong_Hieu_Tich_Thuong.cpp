@@ -12,7 +12,7 @@ int main(){
 	printf("Tich = %.2f\n", a * b);
 	
 	if (b != 0){
-		printf("Thuong = %.2f", a / b);
+		printf("Thuong = %.2f", a / b);}
 	else{
 		printf("Khong the chia cho 0");}
 		
