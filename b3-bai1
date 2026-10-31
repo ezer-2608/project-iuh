@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Nhập một số bất kỳ: ");
+    scanf("%d", &n);
+
+    if (n >= 1 && n <= 9) {
+        printf("Đọc giá trị: ");
+        switch (n) {
+            case 1: printf("Một\n"); break;
+            case 2: printf("Hai\n"); break;
+            case 3: printf("Ba\n"); break;
+            case 4: printf("Bốn\n"); break;
+            case 5: printf("Năm\n"); break;
+            case 6: printf("Sáu\n"); break;
+            case 7: printf("Bảy\n"); break;
+            case 8: printf("Tám\n"); break;
+            case 9: printf("Chín\n"); break;
+        }
+    } else {
+        printf("Không đọc được\n");
+    }
+
+    return 0;
+}
