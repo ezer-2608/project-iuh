@@ -1,15 +1,28 @@
 #include <stdio.h>
 
 int main() {
-    int a, b, c, d, min;
-    printf("Nhap 4 so nguyen a, b, c, d: ");
-    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int arr[4];
+    printf("Nhap 4 so nguyen: ");
+    for (int i = 0; i < 4; i++) {
+        scanf("%d", &arr[i]);
+    }
 
-    min = a;
-    if (b < min) min = b;
-    if (c < min) min = c;
-    if (d < min) min = d;
+    // Sap xep noi bot (Bubble Sort)
+    for (int i = 0; i < 3; i++) {
+        for (int j = i + 1; j < 4; j++) {
+            if (arr[i] > arr[j]) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
 
-    printf("So co gia tri nho nhat la: %d\n", min);
+    printf("Cac so theo thu tu tang dan la: ");
+    for (int i = 0; i < 4; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
     return 0;
 }
