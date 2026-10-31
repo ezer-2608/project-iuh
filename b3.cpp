@@ -1,29 +1,29 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
-    int thang, nam;
-    printf("Nhap thang va nam: ");
-    scanf("%d %d", &thang, &nam);
+    float a, b, c;
+    printf("Nhap do dai 3 canh a, b, c: ");
+    scanf("%f %f %f", &a, &b, &c);
 
-    if (thang < 1 || thang > 12 || nam <= 0) {
-        printf("Thang hoac nam khong hop le!\n");
-        return 0;
-    }
+    if (a > 0 && b > 0 && c > 0 && (a + b > c) && (a + c > b) && (b + c > a)) {
+        printf("Ba canh nay tao thanh mot tam giac.\n");
 
-    switch (thang) {
-        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-            printf("Thang %d nam %d co 31 ngay.\n", thang, nam);
-            break;
-        case 4: case 6: case 9: case 11:
-            printf("Thang %d nam %d co 30 ngay.\n", thang, nam);
-            break;
-        case 2:
-            if ((nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0)) {
-                printf("Thang 2 nam %d co 29 ngay (nam nhuan).\n", nam);
+        if (a == b && b == c) {
+            printf("Day la tam giac deu.\n");
+        } else if (a == b || b == c || a == c) {
+            if (a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a) {
+                printf("Day la tam giac vuong can.\n");
             } else {
-                printf("Thang 2 nam %d co 28 ngay.\n", nam);
+                printf("Day la tam giac can.\n");
             }
-            break;
+        } else if (a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a) {
+            printf("Day la tam giac vuong.\n");
+        } else {
+            printf("Day la tam giac thuong.\n");
+        }
+    } else {
+        printf("Ba canh nay khong tao thanh mot tam giac!\n");
     }
 
     return 0;
