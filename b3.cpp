@@ -1,19 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    char c;
-    printf("Nhap mot chu cai: ");
-    scanf(" %c", &c);
+    float a, b;
+    printf("Nhap he so a va b: ");
+    scanf("%f %f", &a, &b);
 
-    if (c >= 'a' && c <= 'z') {
-        c = c - 32; // Chuyen thanh chu hoa
-        printf("Chu sau khi doi: %c\n", c);
-    } else if (c >= 'A' && c <= 'Z') {
-        c = c + 32; // Chuyen thanh chu thuong
-        printf("Chu sau khi doi: %c\n", c);
+    if (a == 0) {
+        if (b == 0) {
+            printf("Phuong trinh co vo so nghiem.\n");
+        } else {
+            printf("Phuong trinh vo nghiem.\n");
+        }
     } else {
-        printf("Khong phai la chu cai hop le!\n");
+        printf("Phuong trinh co nghiem x = %.2f\n", -b / a);
     }
 
     return 0;
 }
+
