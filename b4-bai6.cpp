@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+    int demSNT = 0;
+
+    printf("Nhap vao so nguyen duong n: ");
+    scanf("%d", &n);
+
+    for (int i = 2; i <= n; i++) {
+        int SNT = 1;
+        for (int j = 2; j <= sqrt(i); j++) {
+            if (i % j == 0) {
+                SNT = 0;
+                break;
+            }
+        }
+        if (SNT) {
+            demSNT++;
+        }
+    }
+
+    printf("Tu 2 den %d co tat ca %d so nguyen to\n", n, demSNT);
+    return 0;
+}
