@@ -14,5 +14,6 @@ int main()
 		uscln--;
 
 	printf("USCLN cua %d va %d la %d",a, b, uscln); 
+	return 0;
 }
 
