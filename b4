@@ -3,7 +3,7 @@
 
 int main() {
     int n;
-    long tongSNT = 0;
+    int demSNT = 0;
     
     printf("Nhap vao so nguyen duong n: ");
     scanf("%d", &n);
@@ -17,10 +17,10 @@ int main() {
             }
         }
         if (laSNT) {
-            tongSNT += i;
+            demSNT++;
         }
     }
     
-    printf("Tong cac so nguyen tố tu 2 den %d la: %ld\n", n, tongSNT);
+    printf("Tu 2 den %d co tat ca %d so nguyen to.\n", n, demSNT);
     return 0;
 }
